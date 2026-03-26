@@ -1,6 +1,6 @@
 "use strict";
 (() => {
-    let userRole = 'admin';
+    let userRole = 'student';
     const user = {
         name: 'Embrie',
         age: 22,
