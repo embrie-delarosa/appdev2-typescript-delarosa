@@ -1,11 +1,26 @@
 (() => {
     // Literal Types (Alternative to Enum)
-    let userRole: 'admin' | 'guess' | 'teacher' | 'student' = 'admin'
+    let userRole: 'admin' | 'guest' | 'teacher' | 'student' = 'admin'
 
-    userRole = 'guess'
-    // anotherUserRole = 'superadmin'
+    userRole = 'student'
+    //userRole = 'superadmin' // Error: Type '"superadmin"' is not assignable
 
-    function access(role: 'admin' | 'guess' | 'teacher' | 'student') {
-        // ...
+    function access(role: 'admin' | 'guest' | 'teacher' | 'student'): string {
+        switch (role) {
+            case 'admin':
+                return 'Admin access granted'
+            case 'guest':
+                return 'Guest access limited'
+            case 'teacher':
+                return 'Teacher access granted'
+            case 'student':
+                return 'Student access granted'
+            default:
+                return 'Unknown role'
+        }
     }
-})
+
+    console.log('User role:', userRole)
+    console.log('Access result:', access(userRole))
+    console.log('Student access:', access('student'))
+})()
