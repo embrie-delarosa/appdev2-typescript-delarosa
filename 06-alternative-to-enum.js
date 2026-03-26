@@ -3,7 +3,7 @@
     // Literal Types (Alternative to Enum)
     let userRole = 'admin';
     userRole = 'student';
-    // userRole = 'superadmin' // Error: Type '"superadmin"' is not assignable
+    //userRole = 'superadmin' // Error: Type '"superadmin"' is not assignable
     function access(role) {
         switch (role) {
             case 'admin':
