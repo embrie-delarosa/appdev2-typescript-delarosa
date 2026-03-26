@@ -5,7 +5,7 @@
         return a + b
     }
 
-    add(5, 10)
+    console.log('add(5, 10):', add(5, 10))
     // add("5", 10)
 
     // Special Type `void` - return nothing
@@ -18,7 +18,7 @@
 
     // Another Special Type `never`
     // Function never finishes normally (throws error, infinite loop)
-    function logAndThrow(errorMessage: string) {
+    function logAndThrow(errorMessage: string): never {
         console.log(errorMessage)
         throw new Error(errorMessage)
     }
@@ -47,8 +47,8 @@
     }
 
     let user: User = {
-        name: "Elmer",
-        age: 39,
+        name: "Embrie",
+        age:22,
         // greet: function() {
         //     return this.name
         // }
@@ -59,4 +59,4 @@
     }
 
     user.greet()
-})
+})()
