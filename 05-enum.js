@@ -12,6 +12,7 @@
     })(Role || (Role = {}));
     // let userRole: Role = 0;
     let userRole = Role.SuperAdmin;
+
     console.log(userRole);
     console.log(Role);
 });
